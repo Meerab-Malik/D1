@@ -8,23 +8,23 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
-
   font-family: "Montserrat", sans-serif;
   padding-top: 80px;
 }
 
-/* html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.site-wrapper {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; 
-} */
+  overflow-x: hidden;
+  position: relative;
+}
 
 
 
@@ -60,7 +60,7 @@ body {
   height: auto;
   align-self: center;
   transform: translateX(-80px);
-
+  
   margin-left: clamp(30px, 3vw, 50px);
 
 
@@ -1575,11 +1575,7 @@ footer {
   position: relative;
 }
 
-@supports(scrollbar-color:red white) {
-  * {
-    scrollbar-color: #ffffff rgb(255, 255, 255);
-  }
-}
+
 
 
 
@@ -2097,7 +2093,7 @@ body.portfolio-modal-open {
 
     .portfolio-modal-dialog {
         width: min(100% - 1rem, 620px);
-        max-height: calc(100vh - 1rem);
+        max-height: calc(100vh - 8rem);
     }
 
     .portfolio-modal-content {
